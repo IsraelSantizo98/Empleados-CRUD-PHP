@@ -1,5 +1,6 @@
 <?php 
   include 'php/conexion.php';
+  // include 'eliminar.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -47,10 +48,12 @@ background-color: #dddddd;
     $query = mysqli_query($empleadosConexcion, $instruc);
     // echo "Codigo Empleados <br>";
     while($f = mysqli_fetch_assoc($query)){
-      echo "<tr><td>".$f['codEmpleado']."</td><td>".$f['dpi']."</td><td>".$f['nombre']."</td><td>".$f['apellido']."</td><td>".$f['fechaNacimiento']."</td><td>".$f['estadoVCivil']."</td><td>".$f['hijos']."</td><td>".$f['experienciaLaboral']."</td><td>".$f['fechaIngreso']."</td><td>".$f['fechaFin']."</td><td>".$f['foto']."</td></>";
+      echo "<tr><td>".$f['codEmpleado']."</td><td>".$f['dpi']."</td><td>".$f['nombre']."</td><td>".$f['apellido']."</td><td>".$f['fechaNacimiento']."</td><td>".$f['estadoVCivil']."</td><td>".$f['hijos']."</td><td>".$f['experienciaLaboral']."</td><td>".$f['fechaIngreso']."</td><td>".$f['fechaFin']."</td><td>".$f['foto']."</td><td><a href='eliminar.php?empleados=".$f['codEmpleado']."'>Aceptar</a></td></tr>";
       
     }
   ?>
+  <th>Eliminar</th>
+  <th>Actualizar</th>
 </table>
 </body>
 </html>
