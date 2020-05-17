@@ -1,0 +1,14 @@
+.wrapper {
+  width: 1000px;
+  margin: 0 auto;
+}
+.header-container {
+  padding: 5px;
+  background-color: lightsalmon;
+}
+.header-title {
+  text-align: center;
+}
+.php-container {
+  margin-top: 20px;
+}

@@ -1,0 +1,11 @@
+.wrapper {
+  width: 1000px;
+  margin: 0 auto;
+  border: 1px solid black;
+}
+.header-title {
+  text-align: center;
+}
+.table {
+  margin: 15px;
+}
