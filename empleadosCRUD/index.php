@@ -42,18 +42,20 @@ background-color: #dddddd;
       <th>Fecha Ingreso</th>
       <th>Fecha Retiro</th>
       <th>Foto</th>
+      <th>Eliminar</th>
+      <th>Actualizar</th>
     </tr>
+    
   <?php
     $instruc = "SELECT * FROM empleado";
     $query = mysqli_query($empleadosConexcion, $instruc);
     // echo "Codigo Empleados <br>";
     while($f = mysqli_fetch_assoc($query)){
-      echo "<tr><td>".$f['codEmpleado']."</td><td>".$f['dpi']."</td><td>".$f['nombre']."</td><td>".$f['apellido']."</td><td>".$f['fechaNacimiento']."</td><td>".$f['estadoVCivil']."</td><td>".$f['hijos']."</td><td>".$f['experienciaLaboral']."</td><td>".$f['fechaIngreso']."</td><td>".$f['fechaFin']."</td><td>".$f['foto']."</td><td><a href='eliminar.php?empleados=".$f['codEmpleado']."'>Aceptar</a></td></tr>";
+      echo "<tr><td>".$f['codEmpleado']."</td><td>".$f['dpi']."</td><td>".$f['nombre']."</td><td>".$f['apellido']."</td><td>".$f['fechaNacimiento']."</td><td>".$f['estadoVCivil']."</td><td>".$f['hijos']."</td><td>".$f['experienciaLaboral']."</td><td>".$f['fechaIngreso']."</td><td>".$f['fechaFin']."</td><td>".$f['foto']."</td><td><a href='eliminar.php?empleados=".$f['codEmpleado']."'>Aceptar</a></td><td><a href='actualizar.php?&empleados=".$f['codEmpleado']."&dpi=".$f['dpi']."&nombre=".$f['nombre']."&apellido=".$f['apellido']."&fechaNacimiento=".$f['fechaNacimiento']."&estadoVCivil=".$f['estadoVCivil']."&hijos=".$f['hijos']."&experienciaLaboral=".$f['experienciaLaboral']."&fechaIngreso=".$f['fechaIngreso']."&fechaFin=".$f['fechaFin']."&foto=".$f['foto']."'>Actualizar</a></td></tr>";
       
     }
   ?>
-  <th>Eliminar</th>
-  <th>Actualizar</th>
+  
 </table>
 </body>
 </html>
