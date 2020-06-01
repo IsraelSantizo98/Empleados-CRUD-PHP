@@ -1,0 +1,44 @@
+body {
+  width: 100%;
+  height: 100%;
+  /* margin: 30px auto; */
+}
+#fondoModal {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#contenido {
+  background-color: #fff;
+  width: 50%;
+  height: 200px;
+}
+#exito,
+#error {
+  background-color: #0c9d2a;
+  color: #000;
+  text-align: center;
+  font-family: "segoe ui light";
+}
+#error {
+  background-color: red;
+}
+.mensaje {
+  font-family: "segoe ui light";
+  font-size: 15px;
+  text-align: center;
+}
+.btnAceptar {
+  display: block;
+  width: 20%;
+  background-color: #0c9d2a;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  font-family: "segoe ui ligth";
+  border-radius: 50px;
+  margin: 30px auto;
+}

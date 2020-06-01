@@ -12,5 +12,13 @@
   $suspendido = $_POST['suspendido'];
   //INGRESO A LA TABLA PRODUCTOS
   $instruc1 = "INSERT INTO  productos VALUES (null, '$producto', $proveedor, $categorias, $cantidadProducto, $precio, $existencia, $pedido, '$nuevoPedido', '$suspendido')";
-  mysqli_query($productos_Conex, $instruc1);
+
+  $agregaProducto = mysqli_query($productos_Conex, $instruc1);
+  if($agregaProducto){
+    //HEADER SE USA PARA REDIRIGIR A OTRA PAGINA
+    header('location: notificacion.php?notificacion=1');
+  }
+  else {
+    header('location: notificacion.php?notificacion=2');
+  }
 ?>
