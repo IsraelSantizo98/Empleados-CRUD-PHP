@@ -1,6 +1,6 @@
 <?php 
   //SE DEBE DE AGREGAR PARA INCLUIR EL ARCHIVO DE CONEXION A LA BASE DE DATOS
-  include 'php/conexion.php'
+  include 'php/conexion.php';
 ?>
 <!DOCTYPE html>
 <html lang="es">
